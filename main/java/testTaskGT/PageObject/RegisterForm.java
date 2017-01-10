@@ -1,12 +1,9 @@
-package TestTaskGT.PageObject;
+package testTaskGT.PageObject;
 
 import org.openqa.selenium.By;
 
-import static DriverUtills.Utills.getDriver;
+import static utils.Utills.getDriver;
 
-/**
- * Created by ihor on 04.01.17.
- */
 public class RegisterForm {
     private By enterEmail = By.id("userEmailRegister");
     private By enterPassword = By.id("userPassRegister");
@@ -14,19 +11,19 @@ public class RegisterForm {
     private By registerButton = By.id("register");
 
 
-    public void emailInput (String eMail){
+    public void emailInput(String eMail) {
         getDriver().findElement(enterEmail).sendKeys(eMail);
     }
 
-    public void passInput(String pass){
+    public void passInput(String pass) {
         getDriver().findElement(enterPassword).sendKeys(pass);
     }
 
-    public void clickCheckBox(){
+    public void clickCheckBox() {
         getDriver().findElement(checkBox).click();
     }
 
-    public void clickOnRegisterButtom(){
+    public void clickOnRegisterButtom() {
         getDriver().findElement(registerButton).click();
     }
 
